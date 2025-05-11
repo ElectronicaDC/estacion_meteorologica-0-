@@ -66,4 +66,15 @@ public class MedicionesTemperaturas
         }
         return contador;
     }
+    
+    public double promedioTem(){
+        if(registros == null ){
+            return 0;
+        }
+        double suma = 0; 
+        for(Integer temp : registros){
+            suma+= temp;
+        }
+        return suma; registros.;
+    }
 }

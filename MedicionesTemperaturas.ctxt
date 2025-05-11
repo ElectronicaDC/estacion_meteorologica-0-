@@ -12,4 +12,6 @@ comment3.target=void\ imprimirTemperaturas()
 comment3.text=\n\ Muestra\ todas\ las\ temperaturas\ registradas\ en\ \n\ la\ pantalla.\ \n
 comment4.params=
 comment4.target=int\ cantTemExtrema()
-numComments=5
+comment5.params=
+comment5.target=double\ promedioTem()
+numComments=6
