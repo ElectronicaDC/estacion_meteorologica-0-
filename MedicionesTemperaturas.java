@@ -57,4 +57,13 @@ public class MedicionesTemperaturas
         }
     }
     
+    public int cantTemExtrema(){
+        int contador = 0; 
+        for(Integer temp:registros){
+            if(temp<-15 || temp>35){
+                contador += 1;
+            }
+        }
+        return contador;
+    }
 }
