@@ -1,5 +1,4 @@
 import java.util.ArrayList; 
-
 /**
  * Registros de temperaturas diarios de una estacion meteorológica
  * (                       rama1)
@@ -57,6 +56,10 @@ public class MedicionesTemperaturas
         }
     }
     
+    /**
+     * Muestra las temeperaturas extremas, que son las inferiores a -15
+     * y superiores a 35 grados.
+     */
     public int cantTemExtrema(){
         int contador = 0; 
         for(Integer temp:registros){
@@ -67,14 +70,33 @@ public class MedicionesTemperaturas
         return contador;
     }
     
+    /**
+     * Muestra la temperatura promedio de todas las mediciones. 
+     */
     public double promedioTem(){
-        if(registros == null ){
+        if(registros.size() == 0 ){
             return 0;
         }
         double suma = 0; 
         for(Integer temp : registros){
             suma+= temp;
         }
-        return suma; registros.;
+        return suma / registros.size();
+    }
+    
+    /**
+     * Muestra la temperatura maxima de todas las mediciones registradas.
+     */
+    public int maximaTemp(){
+        if(registros.size() == 0){
+            return 0;
+            }
+        int maxima = registros.get(1);
+        for(Integer temp: registros){
+            if(temp > maxima){
+                maxima = temp;
+            }
+        }
+        return maxima;
     }
 }
