@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MedicionesTemperaturas
-comment0.text=\n\ Registros\ de\ temperaturas\ diarios\ de\ una\ estacion\ meteorol\u00F3gica\n\ (\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rama1)\n
+comment0.text=\n\ Registros\ de\ temperaturas\ diarios\ de\ una\ estacion\ meteorol\u00F3gica\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (rama1)\n
 comment1.params=dia\ mes
 comment1.target=MedicionesTemperaturas(int,\ int)
 comment1.text=\n\ Constructor\ de\ la\ clase.\ Inicializa\ dia\ y\ mes\ con\ los\ par\u00E1metros\ respectivos,\n\ y\ la\ lista\ de\ registros\ se\ inicializa\ vac\u00EDa\ (sin\ mediciones).\n\ Precondici\u00F3n\:\ \n\ \ -\ dia\ debe\ ser\ un\ d\u00EDa\ v\u00E1lido\ (entre\ 1\ y\ 31)\n\ \ -\ mes\ debe\ ser\ un\ mes\ v\u00E1lido\ (entre\ 1\ y\ 12)\n
@@ -19,4 +19,13 @@ comment5.text=\n\ Muestra\ la\ temperatura\ promedio\ de\ todas\ las\ mediciones
 comment6.params=
 comment6.target=int\ maximaTemp()
 comment6.text=\n\ Muestra\ la\ temperatura\ maxima\ de\ todas\ las\ mediciones\ registradas.\n
-numComments=7
+comment7.params=
+comment7.target=int\ minimaTemp()
+comment7.text=\n\ Muestra\ la\ temepratura\ minima\ de\ todas\ las\ mediciones\ registradas.\n
+comment8.params=
+comment8.target=int\ amplitudtemp()
+comment8.text=\n\ Muestra\ la\ amlitud\ termica\ de\ las\ temperaturas\ registradas.\n
+comment9.params=
+comment9.target=int\ cantTempConsecutivas()
+comment9.text=\n\ Muestra\ la\ cantidad\ de\ mediciones\ consecutivas\ con\ una\ misma\ temperatura.\n
+numComments=10

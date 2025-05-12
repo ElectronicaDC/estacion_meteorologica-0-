@@ -1,7 +1,7 @@
 import java.util.ArrayList; 
 /**
  * Registros de temperaturas diarios de una estacion meteorológica
- * (                       rama1)
+ *                        (rama1)
  */
 public class MedicionesTemperaturas
 {
@@ -92,11 +92,78 @@ public class MedicionesTemperaturas
             return 0;
             }
         int maxima = registros.get(1);
-        for(Integer temp: registros){
+        for(Integer temp:registros){
             if(temp > maxima){
                 maxima = temp;
             }
         }
         return maxima;
     }
+    
+    /**
+     * Muestra la temepratura minima de todas las mediciones registradas.
+     */
+    public int minimaTemp(){
+        if(registros.size() == 0){
+            return 0;
+        }
+        int minima = registros.get(1);
+        for(Integer temp:registros){
+            if(temp < minima){
+                minima = temp;
+            }
+        }
+        return minima;
+    }
+    
+    /**
+     * Muestra la amlitud termica de las temperaturas registradas.
+     */
+    public int amplitudtemp(){
+        int minima = registros.get(0);
+        int maxima = registros.get(0);
+        int amplitud = 0;
+        for(Integer temp:registros){
+            if(temp>minima){
+                maxima = temp;
+            }else{
+                minima = temp;
+            }
+        }
+        return amplitud = maxima - minima; 
+    }
+    
+    /**
+     * Muestra la cantidad de mediciones consecutivas con una misma temperatura.
+     */
+    public int cantTempConsecutivas(){
+        if(registros.size() == 0 || registros.size() == 1){
+            return 0;
+        }
+        boolean serie = false;
+        int anterior = registros.get(0);
+        int contador = 0;
+        int i = 1;
+        while(i<registros.size()){
+            if(registros.get(i).equals(anterior)){
+                if(!serie){
+                    contador++;
+                    serie = true;
+                }else{
+                    serie = false;
+                }
+                anterior = registros.get(i);
+            }
+            i ++;
+        }
+        return contador;
+    }
 }
+
+
+       
+        
+        
+
+        
+
